@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #666;
+}
+
+.circle {
+    transform-style: preserve-3d;
+    color: #000;
+    animation: animate 10s linear infinite;
+    /* transform: rotateY(256deg); */
+    /* background: #fff; */
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+    }
+}
+
+
+/* class by splitting.js */
+
+.circle.splitting .char {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    font-size: 3em;
+    padding: 5px 15px;
+    border-top: 10px solid rgb(8, 8, 8);
+    border-bottom: 10px solid rgb(8, 8, 8);
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--char-index) * 11deg)) translateZ(250px);
+}
