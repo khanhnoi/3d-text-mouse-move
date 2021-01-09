@@ -10,13 +10,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #666;
+    background: rgb(28, 27, 27);
 }
 
 .circle {
     transform-style: preserve-3d;
     color: #000;
-    animation: animate 10s linear infinite;
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+    /* animation: animate 10s linear infinite; */
     /* transform: rotateY(256deg); */
     /* background: #fff; */
 }
@@ -45,4 +46,5 @@ body {
     transform-style: preserve-3d;
     transform-origin: center;
     transform: rotateY(calc(var(--char-index) * 11deg)) translateZ(250px);
+    text-shadow: 400px -100px 0 rgba(220, 198, 198, 0.5), 400px 100px 0 rgba(172, 154, 154, 0.5), 800px 0px 1px rgba(179, 164, 164, 0.5);
 }
