@@ -48,3 +48,10 @@ body {
     transform: rotateY(calc(var(--char-index) * 11deg)) translateZ(250px);
     text-shadow: 400px -100px 0 rgba(220, 198, 198, 0.5), 400px 100px 0 rgba(172, 154, 154, 0.5), 800px 0px 1px rgba(179, 164, 164, 0.5);
 }
+
+
+/* .music {
+    position: fixed;
+    top: 0;
+    right: 0;
+} */
